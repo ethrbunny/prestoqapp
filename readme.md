@@ -1,5 +1,10 @@
 ### PrestoQ test app
 
+Project status: [![Build status](https://ci.appveyor.com/api/projects/status/mqj5248ok29w1l4v?svg=true)](https://ci.appveyor.com/project/ethrbunny/prestoqapp)
+
+Master branch status: [![Build status](https://ci.appveyor.com/api/projects/status/mqj5248ok29w1l4v/branch/master?svg=true)](https://ci.appveyor.com/project/ethrbunny/prestoqapp/branch/master)
+
+
 There are 2 components:
 - harness
   - test app
