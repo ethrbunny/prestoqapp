@@ -1,0 +1,25 @@
+apply plugin: 'java'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+dependencies {
+    compile 'org.slf4j:slf4j-api:1.7.21'
+    compile 'ch.qos.logback:logback-classic:1.1.7'
+    compile project(":parser")
+    compile files('../parser/build/libs/parser.jar')
+
+}
+
+jar {
+  manifest {
+    attributes(
+      'Class-Path': configurations.compile.collect { it.getName() }.join(' '),
+      'Main-Class': 'com.company.Main'
+    )
+  }
+
+  from {
+        configurations.compile.collect { it.isDirectory() ? it : zipTree(it) }
+  }
+}
+
